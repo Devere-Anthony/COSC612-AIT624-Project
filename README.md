@@ -1,8 +1,6 @@
-# COSC612-AIT624-Project
+# TODO: Add project name
 
-## TODO: Add project 
-
-### TODO: Add project description
+## TODO: Add project description
 
 ## Team Members:
     Oladiran Apara
