@@ -1,6 +1,6 @@
 # TODO: Formula 1 Team
 
-## TODO: Inventory tracking application for the culinary industry
+## TODO: Supply Chain and Inventory tracking application for the restaurant industry
 ## Team Members:
     Oladiran Apara
     
