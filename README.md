@@ -1,7 +1,6 @@
-# TODO: Add project name
+# TODO: Formula 1 Team
 
-## TODO: Add project description
-
+## TODO: Inventory tracking application for the culinary industry
 ## Team Members:
     Oladiran Apara
     
