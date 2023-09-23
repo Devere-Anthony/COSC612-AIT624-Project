@@ -1,6 +1,6 @@
-# TODO: Formula 1 Team
+# Team Name: Formula 1 Team
 
-## TODO: Supply Chain and Inventory Management application for the restaurant industry
+## Project Description: Supply Chain and Inventory Management application for the restaurant industry
 ## Team Members:
     Oladiran Apara
     
