@@ -1,6 +1,6 @@
-# Team Name: Formula 1 Team
+# Team Name: Formula 1 LLC
 
-## Project Description: Supply Chain and Inventory Management application for the restaurant industry
+## Project Description: Inventory Management System for F1 Cafe
 ## Team Members:
     Oladiran Apara
     
