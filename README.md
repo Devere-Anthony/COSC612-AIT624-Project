@@ -1,7 +1,6 @@
-# TODO: Add project name
+# Team Name: Formula 1 LLC
 
-## TODO: Add project description
-
+## Project Description: Inventory Management System for F1 Cafe
 ## Team Members:
     Oladiran Apara
     
