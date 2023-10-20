@@ -11,15 +11,19 @@ console.log(`App up at port ${PORT}`);
 });
 
 // Test database connection stuff
-const { Client } = require('pg')
-const client = new Client({
-  user: 'pxtfnuiunqylqt',
-  host: 'ec2-35-169-9-79.compute-1.amazonaws.com',
-  database: 'denh9ihtjut7gi',
-  password: '120b612879679e1bcbe878a83d862531aee14015a25921276ad66a20ab45a0f7',
-  port: 5432,
-})
-client.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
+// const { Client } = require('pg')
+// var fs = require('fs');
+// const client = new Client({
+//   user: 'pxtfnuiunqylqt',
+//   host: 'ec2-35-169-9-79.compute-1.amazonaws.com',
+//   database: 'denh9ihtjut7gi',
+//   password: '120b612879679e1bcbe878a83d862531aee14015a25921276ad66a20ab45a0f7',
+//   port: 5432,
+//   ssl  : {
+//     ca : fs.readFileSync('<path to CA cert file>')
+//   }
+// })
+// client.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+// });
