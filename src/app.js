@@ -11,24 +11,15 @@ console.log(`App up at port ${PORT}`);
 });
 
 // Test database connection stuff
-const { Client } = require('pg');
-
+const { Client } = require('pg')
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
-
-client.connect();
-
-client.query('SELECT * FROM farm;', (err, res) => {
+  user: 'pxtfnuiunqylqt',
+  host: 'ec2-35-169-9-79.compute-1.amazonaws.com',
+  database: 'denh9ihtjut7gi',
+  password: '120b612879679e1bcbe878a83d862531aee14015a25921276ad66a20ab45a0f7',
+  port: 5432,
+})
+client.connect(function(err) {
   if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-    console.log("Hello");
-  }
-  client.end();
+  console.log("Connected!");
 });
-
-console.log("Hello");
