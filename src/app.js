@@ -1,9 +1,11 @@
-const app = require( "express" )();
+const app = require("express")();
+
 const PORT = process.env.PORT || 3000;
-app•get(""
-, (rea, res) =>
-res.send("F1 IMS (coming soon)");
+
+app.get("", (req, res) => {
+  res.send("F1 Roasters IMS (coming soon)");
 });
+
 app.listen(PORT, () => {
-console.log(App up at port ${PORT} );
+console.log(`App up at port ${PORT}`);
 });
