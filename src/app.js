@@ -1,4 +1,3 @@
-var pg = require('pg');
 const app = require("express")();
 
 const PORT = process.env.PORT || 3000;
@@ -31,3 +30,5 @@ client.query('SELECT * FROM farm;', (err, res) => {
   }
   client.end();
 });
+
+console.log("Hello");
