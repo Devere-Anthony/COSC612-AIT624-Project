@@ -1,3 +1,4 @@
+var pg = require('pg');
 const app = require("express")();
 
 const PORT = process.env.PORT || 3000;
