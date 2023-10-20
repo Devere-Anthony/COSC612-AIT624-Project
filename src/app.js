@@ -27,6 +27,7 @@ client.query('SELECT * FROM farm;', (err, res) => {
   if (err) throw err;
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
+    console.log("Hello");
   }
   client.end();
 });
