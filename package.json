@@ -1,0 +1,19 @@
+{
+  "name": "cosc612-ait624-project",
+  "version": "1.0.0",
+  "description": "## Project Description: Inventory Management System for F1 Cafe ## Team Members:     Oladiran Apara",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
