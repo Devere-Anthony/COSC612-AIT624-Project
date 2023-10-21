@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Stock Orders | F1 Coffee Roasters IMS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <nav id="navbar">
+            <div class="mainMenu">
+                <div class="firstDrop">
+                    <div class="dropMenu">
+                        <a href="index.html"><button id="buttonDrop">Product</button></a>
+                        <div id="myDrop" class="dropContent">
+                            <a href="">Light Roast</a>
+                            <a href="">Medium Roast</a>
+                            <a href="">Dark Roast</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <div class="nonDrop">
+                        <button class="defaultBtn" onclick="window.location.href='farms.html'">Farms</button>
+                    </div>
+                </div>
+
+                <div id="logout">
+                    <button class="logout" onclick="window.location.href='admin_login.html'">Logout</button>
+                </div>
+        </nav>
+        <div class="banner">
+            <!--coffee bag by supalerk laipawat from Noun Project (CC BY 3.0)-->
+            <a href="https://thenounproject.combr/owse/icons/term/coffee-bag/"><img src="logoF1CR.png" id="logo"></a>
+            <span>F1 Coffee Roasters IMS</span>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <h3 id="page">F1 Coffee Roasters IMS - Stock Orders
+            <button class="logout" onclick="window.location.href='index.html'"
+                style="float:right;margin-right: 20px;">Cancel</button>
+        </h3>
+        <div class="mainTable">
+            <table class="table">
+                <form>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Product ID</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1000</td>
+                                <td>10</td>
+                                <td>2023-10-09 12:00:14</td>
+                        </tbody>
+                    </table>
+                </form>
+                </form>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

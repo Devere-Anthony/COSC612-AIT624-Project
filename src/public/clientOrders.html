@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Client Orders | F1 Coffee Roasters IMS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <nav id="navbar">
+            <div class="mainMenu">
+                <div class="firstDrop">
+                    <div class="dropMenu">
+                        <button id="buttonDrop">Products</button>
+                        <div id="myDrop" class="dropContent">
+                            <a href="">Light Roast</a>
+                            <a href="">Medium Roast</a>
+                            <a href="">Dark Roast</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <div class="nonDrop">
+                        <button class="defaultBtn" onclick="window.location.href='farms.html'">Farms</button>
+                    </div>
+                </div>
+
+                <div id="logout">
+                    <button class="logout" onclick="window.location.href='admin_login.html'">Logout</button>
+                </div>
+        </nav>
+        <div class="banner">
+            <!--coffee bag by supalerk laipawat from Noun Project (CC BY 3.0)-->
+            <a href="https://thenounproject.combr/owse/icons/term/coffee-bag/"><img src="logoF1CR.png" id="logo"></a>
+            <span>F1 Coffee Roasters IMS</span>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <h3 id="page">F1 Coffee Roasters IMS - Client Orders
+            <button class="logout" onclick="window.location.href='index.html'"
+                style="float:right;margin-right: 20px;">Cancel</button>
+            <button class="logout" onclick="inactivateProduct()"
+                style="float:right;margin-right: 20px;">Inactivate</button>
+            <input type="submit" name="submit" value="Save" button class="logout"
+                onclick="return saveChanges()"
+                style="float:right;margin-right: 20px;"></button>
+        </h3>
+        <br>
+        <div class="mainTable">
+            <table class="table">
+                    <fieldset class="stock-control">
+                        <br/>
+                        <legend>Fulfill Client Orders</legend>
+                        <br/>
+                        <label>Product ID:</label>
+                        <input type="text" class="txt-id">
+                        <br/>
+                        <br/>
+                        <label>Quantity (bags):</label>
+                        <input type="text" class="txt-change">
+                        <br />
+                        <br />
+                        <input type="button" class="btn-add" value="Fulfill">
+                        <input type="button" class="btn-sub" value="Void">
+                        <input type="button" class="btn-set" value="Set">
+                        <br />
+                        <br />
+                        <br />
+                        <label>Bags in stock: </label><span class="lbl-total"></span>
+                    </fieldset>
+                </form>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

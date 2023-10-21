@@ -14,23 +14,23 @@
             <div class="mainMenu">
                 <div class="firstDrop">
                     <div class="dropMenu">
-                        <button id="buttonDrop">Products</button>
+                        <a href="index.html"><button id="buttonDrop">Products</button></a>
                         <div id="myDrop" class="dropContent">
-                            <a href="lightRoast.html">Light Roast</a>
+                            <a href="">Light Roast</a>
                             <a href="">Medium Roast</a>
                             <a href="">Dark Roast</a>
                         </div>
                     </div>
                 </div>
                 <div class="nonDrop">
-                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                    <button class="defaultBtn" onclick="window.location.href='POS.html'">Client Orders</button>
                 </div>
                 <div class="nonDrop">
                     <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
                 </div>
                 <div class="nonDrop">
                     <div class="nonDrop">
-                        <button class="defaultBtn" onclick="window.location.href='Farms.html'">Farms</button>
+                        <button class="defaultBtn" onclick="window.location.href='farms.html'">Farms</button>
                     </div>
                 </div>
 
@@ -48,19 +48,16 @@
     <br>
     <main>
         <h3 id="page">F1 Coffee Roasters IMS - Edit Product
-            <button class="logout" onclick="window.location.href='lightRoast.html'"
+            <button class="logout" onclick="window.location.href='index.html'"
                 style="float:right;margin-right: 20px;">Cancel</button>
             <button class="logout" onclick="inactivateProduct()"
                 style="float:right;margin-right: 20px;">Inactivate</button>
             <input type="submit" name="submit" value="Save" button class="logout"
-                onclick="window.location.href='setStockProduct_completed.html'"
-                style="float:right;margin-right: 20px;"></button>
+                onclick="return saveChanges()" style="float:right;margin-right: 20px;"></button>
         </h3>
-        <br>
-        <div class="mainTable">
+        <br />
+        <div class=" mainTable">
             <table class="table">
-                <form method="get" action="setStockProducts_completed.html" id="myForm"
-                    onsubmit="return allFunctions()">
                     <fieldset>
                         <legend>Current Stock Quantity
                         </legend>
@@ -93,6 +90,7 @@
                     <br />
                     <br />
                     <fieldset>
+                        <!--Filled when product is clicked-->
                         <legend>Product Specifications</legend>
                         <br />
                         <label>Product ID:
@@ -102,14 +100,13 @@
                         <br />
                         <label>Product Name:
                             <input type="text" name="productName" required="required" id="productName"
-                                placeholder="Ethiopian" />
+                                placeholder="Ethiopian Natural" />
                         </label>
                         <br />
                         <br />
                         <label>Barcode:
                         </label>
-                        <input type="text" name="barcode" id="barcode" required="required"
-                            onkeyup="return codeValidity()" placeholder="12345" />
+                        <input type="text" name="barcode" id="barcode" required="required" placeholder="8095632" />
                         </label>
                         <br />
                         <br />
@@ -133,11 +130,11 @@
                         <br />
                         <br />
                         <label>Availability:
-                            <input type="checkbox" name="availability" value="yes" />
+                            <input type="checkbox" name="availability" value="yes" checked />
                         </label>
                     </fieldset>
                 </form>
-        </div>
+                </div>
     </main>
     <script src="script.js"></script>
 </body>

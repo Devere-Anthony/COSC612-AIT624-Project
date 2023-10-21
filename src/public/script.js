@@ -16,7 +16,15 @@ buttonDrop.addEventListener("mouseover", () => {
 function inactivateProduct() {
   confirm("Are you sure you want to inactivate this product?");
 }
+function saveChanges() {
+  var ask = window.confirm("Are you sure you want to save all changes?");
+  if (ask) {
+      window.alert("All changes saved.");
+      window.location.href="index.html";
+  }
+}
 
+// Functions for IMS needs fixing
 // add, subtract, set stock quantity
 $(function () {
 
