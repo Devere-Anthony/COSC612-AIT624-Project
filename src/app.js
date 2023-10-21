@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get("", (req, res) => {
   res.send("F1 Roasters IMS (coming soon)");
+  console.log("Did it work?")
 });
 
 app.listen(PORT, () => {
