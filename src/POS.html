@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Products | F1 Coffee Roasters IMS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <nav id="navbar">
+            <div class="mainMenu">
+                <div class="firstDrop">
+                    <div class="dropMenu">
+                        <button id="buttonDrop">Products</button>
+                        <div id="myDrop" class="dropContent">
+                            <a href="lightRoast.html">Light Roast</a>
+                            <a href="">Medium Roast</a>
+                            <a href="">Dark Roast</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <div class="nonDrop">
+                        <button class="defaultBtn" onclick="window.location.href='Farms.html'">Farms</button>
+                    </div>
+                </div>
+
+                <div id="logout">
+                    <button class="logout" onclick="window.location.href='admin_login.html'">Logout</button>
+                </div>
+        </nav>
+        <div class="banner">
+            <!--coffee bag by supalerk laipawat from Noun Project (CC BY 3.0)-->
+            <a href="https://thenounproject.combr/owse/icons/term/coffee-bag/"><img src="logoF1CR.png" id="logo"></a>
+            <span>F1 Coffee Roasters IMS</span>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <h3 id="page">F1 Coffee Roasters IMS - Point of Sale
+            <button class="logout" onclick="window.location.href='lightRoast.html'"
+                style="float:right;margin-right: 20px;">Cancel</button>
+            <button class="logout" onclick="inactivateProduct()"
+                style="float:right;margin-right: 20px;">Inactivate</button>
+            <input type="submit" name="submit" value="Save" button class="logout"
+                onclick="window.location.href='setStockProduct_completed.html'"
+                style="float:right;margin-right: 20px;"></button>
+        </h3>
+        <br>
+        <div class="mainTable">
+            <table class="table">
+                <form method="get" action="setStockProducts_completed.html" id="myForm"
+                    onsubmit="return allFunctions()">
+
+
+                    <fieldset class="stock-control">
+                        <br/>
+                        <legend>Edit Stock Amount</legend>
+                        <br/>
+                        <label>ID:</label>
+                        <input type="text" class="txt-id">
+                        <br/>
+                        <br/>
+                        <label>Amount:</label>
+                        <input type="text" class="txt-change">
+                        <br />
+                        <br />
+                        <input type="button" class="btn-add" value="Add">
+                        <input type="button" class="btn-sub" value="Subtract">
+                        <input type="button" class="btn-set" value="Set">
+                        <br />
+                        <label>In stock: </label><span class="lbl-total"></span>
+
+                    </fieldset>
+                </form>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

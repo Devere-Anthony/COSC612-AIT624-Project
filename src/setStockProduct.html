@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Products | F1 Coffee Roasters IMS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <nav id="navbar">
+            <div class="mainMenu">
+                <div class="firstDrop">
+                    <div class="dropMenu">
+                        <button id="buttonDrop">Products</button>
+                        <div id="myDrop" class="dropContent">
+                            <a href="lightRoast.html">Light Roast</a>
+                            <a href="">Medium Roast</a>
+                            <a href="">Dark Roast</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <div class="nonDrop">
+                        <button class="defaultBtn" onclick="window.location.href='Farms.html'">Farms</button>
+                    </div>
+                </div>
+
+                <div id="logout">
+                    <button class="logout" onclick="window.location.href='admin_login.html'">Logout</button>
+                </div>
+        </nav>
+        <div class="banner">
+            <!--coffee bag by supalerk laipawat from Noun Project (CC BY 3.0)-->
+            <a href="https://thenounproject.combr/owse/icons/term/coffee-bag/"><img src="logoF1CR.png" id="logo"></a>
+            <span>F1 Coffee Roasters IMS</span>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+        <h3 id="page">F1 Coffee Roasters IMS - Edit Product
+            <button class="logout" onclick="window.location.href='lightRoast.html'"
+                style="float:right;margin-right: 20px;">Cancel</button>
+            <button class="logout" onclick="inactivateProduct()"
+                style="float:right;margin-right: 20px;">Inactivate</button>
+            <input type="submit" name="submit" value="Save" button class="logout"
+                onclick="window.location.href='setStockProduct_completed.html'"
+                style="float:right;margin-right: 20px;"></button>
+        </h3>
+        <br>
+        <div class="mainTable">
+            <table class="table">
+                <form method="get" action="setStockProducts_completed.html" id="myForm"
+                    onsubmit="return allFunctions()">
+                    <fieldset>
+                        <legend>Current Stock Quantity
+                        </legend>
+                        <br />
+                        <label for="currentStock">Available bags:</label>
+                        <!--Dynamic Quantity-->
+                        <br />
+                    </fieldset>
+                    <br />
+                    <br />
+                    <fieldset>
+                        <legend>Set Product Threshold
+                        </legend>
+                        <br />
+                        <label for="maxThreshold">Maximum Threshold:</label>
+                        <input type="range" max="100" min="1"
+                            oninput="document.getElementById('maxThresholdLabel').innerHTML = this.value;" step="1"
+                            name="maxThreshold" id="maxThreshold" value="20">
+                        </input>
+                        <em id="maxThresholdLabel" style="font-style: normal;"></em>
+                        <br />
+                        <br />
+                        <label for="minThreshold">Minimum Threshold:</label>
+                        <input type="range" max="99" min="0"
+                            oninput="document.getElementById('minThresholdLabel').innerHTML = this.value;" step="1"
+                            name="minThreshold" id="minThreshold" value="0">
+                        </input>
+                        <em id="minThresholdLabel" style="font-style: normal;"></em>
+                    </fieldset>
+                    <br />
+                    <br />
+                    <fieldset>
+                        <legend>Product Specifications</legend>
+                        <br />
+                        <label>Product ID:
+                            <input type="text" name="productID" required="required" id="productID" placeholder="1000" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Product Name:
+                            <input type="text" name="productName" required="required" id="productName"
+                                placeholder="Ethiopian" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Barcode:
+                        </label>
+                        <input type="text" name="barcode" id="barcode" required="required"
+                            onkeyup="return codeValidity()" placeholder="12345" />
+                        </label>
+                        <br />
+                        <br />
+                        <label for="category">Roast Category:</label>
+                        <select id="category">
+                            <option value="light">Light Roast</option>
+                            <option value="medium">Medium Roast</option>
+                            <option value="dark">Dark Roast</option>
+                        </select>
+                        <br />
+                        <br />
+                        <label>Retail Price:
+                            <input type="text" name="retail" required="required" id="retail" placeholder="12.00" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Wholesale Price:
+                            <input type="text" name="wholesale" required="required" id="wholesale"
+                                placeholder="10.00" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Availability:
+                            <input type="checkbox" name="availability" value="yes" />
+                        </label>
+                    </fieldset>
+                </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

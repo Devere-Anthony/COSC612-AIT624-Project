@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Products | F1 Coffee Roasters IMS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <nav id="navbar">
+            <div class="mainMenu">
+                <div class="firstDrop">
+                    <div class="dropMenu">
+                        <button id="buttonDrop">Products</button>
+                        <div id="myDrop" class="dropContent">
+                            <a href="lightRoast.html">Light Roast</a>
+                            <a href="">Medium Roast</a>
+                            <a href="">Dark Roast</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='clientOrders.html'">Client Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <button class="defaultBtn" onclick="window.location.href='stockOrders.html'">Stock Orders</button>
+                </div>
+                <div class="nonDrop">
+                    <div class="nonDrop">
+                        <button class="defaultBtn" onclick="window.location.href='Farms.html'">Farms</button>
+                    </div>
+                </div>
+
+                <div id="logout">
+                    <button class="logout" onclick="window.location.href='admin_login.html'">Logout</button>
+                </div>
+        </nav>
+        <div class="banner">
+            <!--coffee bag by supalerk laipawat from Noun Project (CC BY 3.0)-->
+            <a href="https://thenounproject.combr//owse/icons/term/coffee-bag/"><img src="logoF1CR.png" id="logo"></a>
+            <span>F1 Coffee Roasters IMS</span>
+        </div>
+    </header>
+    <br />
+    <br />
+    <main>
+        <h3 id="page">F1 Coffee Roasters IMS - Products
+            <button class="logout" onclick="window.location.href='addProduct.html'"
+                style="float:right;margin-right: 20px;">Add
+                Product</button>
+            <input type="search" class="logout" placeholder="Search Product" style="float:right;margin-right: 20px;">
+        </h3>
+        <br>
+        <div class="mainTable">
+            <form>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Name</th>
+                            <th>Barcode</th>
+                            <th>Category</th>
+                            <th>Retail Price</th>
+                            <th>Wholesale Price</th>
+                            <th>Current Stock Qty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="setStockProduct.html" style="color:black">1000</a></td>
+                            <td><a href="setStockProduct.html" style="color:black">Ethiopian Natural</a></td>
+                            <td style="color:darkgreen;font-weight: 500;">8095632</td>
+                            <td>Light Roast</td>
+                            <td>12.00</td>
+                            <td>10.00</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td>Colombian Anaerobic</td>
+                            <td style="color:darkgreen;font-weight: 500;">6464642</td>
+                            <td>Medium Roast</td>
+                            <td>15.00</td>
+                            <td>12.50</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>3000</td>
+                            <td>Honduras Natural</td>
+                            <td style="color:darkgreen;font-weight: 500;">9019697</td>
+                            <td>Dark Roast</td>
+                            <td>11.00</td>
+                            <td>10.00</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>Ethiopian Washed</td>
+                            <td style="color:darkgreen;font-weight: 500;">4193677</td>
+                            <td>Light Roast</td>
+                            <td>15.00</td>
+                            <td>12.50</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>5000</td>
+                            <td>Colombian Natural</td>
+                            <td style="color:darkgreen;font-weight: 500;">4133124</td>
+                            <td>Dark Roast</td>
+                            <td>13.00</td>
+                            <td>11.50</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+<br />
+<br />
+
+</html>
