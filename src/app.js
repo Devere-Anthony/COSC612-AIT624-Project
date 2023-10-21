@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
+// app.use(express.static('src'))
 
-app.get("", (req, res) => {
+
+app.get("/", (req, res) => {
   res.send("F1 Roasters IMS (coming soon)");
 });
 
