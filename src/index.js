@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 3000;
 app.use('/', express.static('src/public'));
 
 app.get('/', (req, res) => {
-  //res.send("F1 Roasters IMS (coming soon)");
   res.sendFile("./public", 'index.html')
 });
 
