@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* EXPRESS REQUIREMENTS */
 const express = require('express')
 const app = express()
@@ -37,14 +38,20 @@ const getProduct = (request, response) => {
 
 /* EXPRESS SETTINGS */
 app.use(express.urlencoded({extended: true, limit: '1mb'}))
+=======
+/* Primary driver of web application */
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+>>>>>>> 8fb8f638413c1ef68529726a24c07e60cb509450
 app.use('/', express.static('src/public'));
 
-
-/* GET HOMEPAGE */
 app.get('/', (req, res) => {
   res.sendFile("./public", 'index.html')
 });
 
+<<<<<<< HEAD
 
 /* ROUTES */
 // route 1: request data on all farms
@@ -72,6 +79,8 @@ app.post('/products', (req, res) => {
                   })
 })
 
+=======
+>>>>>>> 8fb8f638413c1ef68529726a24c07e60cb509450
 app.listen(PORT, () => {
-  console.log(`App up at port ${PORT}`);
-})
+console.log(`App up at port ${PORT}`);
+});
