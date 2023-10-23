@@ -16,6 +16,8 @@ CREATE TABLE product (
 	retail numeric,
 	wholesale numeric,
 	quantity integer,
+	max_thresh integer, 
+	min_thresh integer,
 	CONSTRAINT product_key PRIMARY KEY (product_id)
 );
 

@@ -70,7 +70,7 @@
                     </fieldset>
                     <br />
                     <br />
-                    <fieldset>
+                    <!-- <fieldset>
                         <legend>Set Product Threshold
                         </legend>
                         <br />
@@ -88,7 +88,7 @@
                             name="minThreshold" id="minThreshold" value="0">
                         </input>
                         <em id="minThresholdLabel" style="font-style: normal;"></em>
-                    </fieldset>
+                    </fieldset> -->
                     <br />
                     <br />
                     <fieldset>
@@ -132,14 +132,28 @@
                         <br />
                         <br />
                         <label>Quantity:
-                            <input type="text" name="quantity" required="required" id="quantity"
-                                placeholder="10.00" />
+                            <input type="number" name="quantity" required="required" id="quantity"
+                                placeholder="0" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Maximum Threshold:
+                            <input type="number" name="max" required="required" id="max"
+                                placeholder="100" />
+                        </label>
+                        <br />
+                        <br />
+                        <label>Minimum Threshold:
+                            <input type="number" name="min" required="required" id="min"
+                                placeholder="0" />
                         </label>
                         <br />
                         <br />
                         <label>Availability:
                             <input type="checkbox" name="availability" value="yes" checked />
                         </label>
+                        <br />
+                        <br />
                     </fieldset>
                     <button>Send</button>
                 </form>

@@ -1,11 +1,10 @@
-/* REQUIREMENTS */
+/* EXPRESS REQUIREMENTS */
 const express = require('express')
-const bodyParser = require('body-parser')
 const app = express()
-const db = require('./queries')
 const PORT = process.env.PORT || 3000
 
 /* CREATE CONNECTION TO DATABASE */
+/* TODO: Change database credentials before deployment to Heroku */
 const Pool = require('pg').Pool
 const pool = new Pool({
     user: 'devere',
@@ -27,17 +26,13 @@ const getFarm = (request, response) => {
 }
 
 const getProduct = (request, response) => {
-  /* getFarm - return all records from farm table */
+  /* getProduct - return all records from product table */
   pool.query('SELECT * FROM product', (error, results) => {
       if (error) {
           throw error
       }
       response.status(200).json(results.rows)
   })
-}
-
-const updateProduct = (product, request, response) => {
-  /* TODO: Move update logic here */
 }
 
 /* EXPRESS SETTINGS */
@@ -60,20 +55,21 @@ app.get('/products', getProduct)
 
 // route 3: Update a specific product in the database
 app.post('/products', (req, res) => {
-  const { productID, productName, barcode, category, retail, wholesale, quantity} = req.body
-  const product = {productID, productName, barcode, category, retail, wholesale }
-  updateProduct(product)
+  const { productID, productName, barcode, category, retail, wholesale, quantity, max, min} = req.body
+  const product = {productID, productName, barcode, category, retail, wholesale, quantity, max, min}
   pool.query(`UPDATE product
-              SET barcode = ${barcode},
-                  category = 'Light Roast',
-                  retail = ${retail},
-                  wholesale = ${wholesale},
-                  quantity = ${quantity}
-              WHERE product_id = ${productID};`, 
-               (err, output) => {
-                if (err) throw err
-                res.send("Prouct updated successfully!")
-                })
+                SET barcode = ${barcode},
+                    category = 'Light Roast',
+                    retail = ${retail},
+                    wholesale = ${wholesale},
+                    quantity = ${quantity}, 
+                    max_thresh = ${max}, 
+                    min_thresh = ${min}
+                WHERE product_id = ${productID};`, 
+                (err, output) => {
+                  if (err) throw err
+                  res.send("Product updated successfully!")
+                  })
 })
 
 app.listen(PORT, () => {
